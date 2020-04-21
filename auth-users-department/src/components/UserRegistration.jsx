@@ -22,7 +22,7 @@ const UserRegistration = () => {
       .then((res) => {
         console.log("POST RESPONSE FROM USER REGISTRATION", res);
         localStorage.setItem("token", JSON.stringify(res.data.token));
-        push("/");
+        push("/users");
       })
       .catch((err) => console.log(err.message));
 
